@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffeaf2">
+  <meta name="description" content="A magical birthday surprise made with love by Gayatri for Samruddhi.">
+  <title>A Magical Birthday for Samruddhi ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow glow-one"></div><div class="background-glow glow-two"></div>
+  <div id="stars" aria-hidden="true"></div>
+  <canvas id="effects" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="logo" href="#home">for Samruddhi <span>✦</span></a>
+    <button id="musicButton" class="music-button" type="button" aria-pressed="false">♫ <span>Play birthday music</span></button>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="welcome-card">
+        <p class="eyebrow">A BIRTHDAY MOODBOARD</p>
+        <div class="moon-art"><span class="moon">☾</span><span class="sparkle s1">✧</span><span class="sparkle s2">✦</span><span class="sparkle s3">♡</span></div>
+        <p class="small-caps">HEY, BIRTHDAY GIRL</p>
+        <h1>Dear <em>Samuu</em>,<br>your magic begins here.</h1>
+        <p class="intro">I made something special just for you. Take a little moment, make a wish, and open your surprise. 💗</p>
+        <button id="beginButton" class="main-button">Open your surprise <span>→</span></button>
+        <p class="made-by">A little website, made with lots of love by Gayatri</p>
+      </div>
+      <div class="side-note note-a">you are loved ♡</div><div class="side-note note-b">make a wish ✨</div>
+    </section>
+
+    <section id="gift" class="page">
+      <div class="section-card gift-section">
+        <p class="eyebrow">A PRESENT FOR YOU</p>
+        <h2>Something magical<br><em>is waiting...</em></h2>
+        <p class="section-copy">A little box filled with big birthday wishes. Tap the gift to unwrap it!</p>
+        <button id="giftButton" class="gift-button" aria-label="Open the birthday gift">
+          <span class="gift-glow"></span><span class="gift-emoji">🎁</span><span class="gift-hint">TAP TO OPEN</span>
+        </button>
+        <p id="giftMessage" class="gift-message" aria-live="polite">Your surprise is waiting inside 💝</p>
+        <button id="toMemories" class="text-button hidden">Continue to your memories ↓</button>
+      </div>
+    </section>
+
+    <section id="memories" class="page">
+      <div class="section-card memories-section">
+        <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
+        <p class="section-copy">A little collection of our favourite moments, pretty details and memories. Add your photos to make this board yours.</p>
+               <div class="photo-grid" id="photoGrid" aria-label="Your personal Pinterest-style photo gallery">
+          <figure class="photo-card photo-tall">
+            <img src="images/photo-1.jpg" alt="Your photo 1" onerror="this.style.display='none'">
+            <div class="placeholder-content"><span>♡</span><b>Your photo 1</b><small>Add images/photo-1.jpg</small></div>
+            <figcaption>♡</figcaption>
+          </figure>
+          <figure class="photo-card ">
+            <img src="images/photo-2.jpg" alt="Your photo 2" onerror="this.style.display='none'">
+            <div class="placeholder-content"><span>♡</span><b>Your photo 2</b><small>Add images/photo-2.jpg</small></div>
+            <figcaption>♡</figcaption>
+          </figure>
+          <figure class="photo-card ">
+            <img src="images/photo-3.jpg" alt="Your photo 3" onerror="this.style.display='none'">
+            <div class="placeholder-content"><span>♡</span><b>Your photo 3</b><small>Add images/photo-3.jpg</small></div>
+            <figcaption>♡</figcaption>
+          </figure>
+          <figure class="photo-card ">
+            <img src="images/photo-4.jpg" alt="Your photo 4" onerror="this.style.display='none'">
+            <div class="placeholder-content"><span>♡</span><b>Your photo 4</b><small>Add images/photo-4.jpg</small></div>
+            <figcaption>♡</figcaption>
+          </figure>
+          <figure class="photo-card ">
+            <img src="images/photo-5.jpg" alt="Your photo 5" onerror="this.style.display='none'">
+            <div class="placeholder-content"><span>♡</span><b>Your photo 5</b><small>Add images/photo-5.jpg</small></div>
+            <figcaption>♡</figcaption>
+          </figure>
+          <figure class="photo-card ">
+            <img src="images/photo-6.jpg" alt="Your photo 6" onerror="this.style.display='none'">
+            <div class="placeholder-content"><span>♡</span><b>Your photo 6</b><small>Add images/photo-6.jpg</small></div>
+            <figcaption>♡</figcaption>
+          </figure>
+          <figure class="photo-card ">
+            <img src="images/photo-7.jpg" alt="Your photo 7" onerror="this.style.display='none'">
+            <div class="placeholder-content"><span>♡</span><b>Your photo 7</b><small>Add images/photo-7.jpg</small></div>
+            <figcaption>♡</figcaption>
+          </figure>
+        </div>
+        <button class="main-button" id="toReasons">A few things about you <span>→</span></button>
+      </div>
+    </section>
+
+    <section id="reasons" class="page">
+      <div class="section-card reasons-section">
+        <p class="eyebrow">TEN LITTLE REMINDERS</p>
+        <h2>Why you're <em>so special</em></h2>
+        <p class="section-copy">A few things I hope you never forget...</p>
+        <div class="reasons-grid">
+          <div class="reason"><span>01</span><p>Your smile can make an ordinary day brighter.</p></div>
+          <div class="reason"><span>02</span><p>You have a heart worth celebrating.</p></div>
+          <div class="reason"><span>03</span><p>Your kindness makes a difference.</p></div>
+          <div class="reason"><span>04</span><p>You bring your own sparkle wherever you go.</p></div>
+          <div class="reason"><span>05</span><p>You deserve every beautiful thing coming your way.</p></div>
+          <div class="reason"><span>06</span><p>Your dreams are worth chasing.</p></div>
+          <div class="reason"><span>07</span><p>You make memories feel extra special.</p></div>
+          <div class="reason"><span>08</span><p>You are stronger than you sometimes realise.</p></div>
+          <div class="reason"><span>09</span><p>The world is better with your laughter in it.</p></div>
+          <div class="reason"><span>10</span><p>Most of all, you're wonderfully, unapologetically YOU.</p></div>
+        </div>
+        <button class="main-button" id="toLetter">One last little thing <span>→</span></button>
+      </div>
+    </section>
+
+    <section id="letter" class="page">
+      <div class="section-card letter-section">
+        <p class="eyebrow">A LETTER FROM THE HEART</p>
+        <div class="envelope" id="envelope"><span>💌</span></div>
+        <h2>A little note <em>for you</em></h2>
+        <p class="section-copy">Some wishes are better when they're opened slowly.</p>
+        <button id="openLetter" class="main-button">Open your letter ♡</button>
+        <article id="letterContent" class="letter-content hidden">
+          <p>Dear Samruddhi,</p>
+          <p>On your birthday, I just want to remind you how special you are. I'm grateful for the smiles, little moments and memories that make our friendship meaningful.</p>
+          <p>I hope this new chapter brings you peaceful days, exciting adventures, genuine happiness, good health and countless reasons to smile. May you always find the courage to follow your dreams and the confidence to be exactly who you are.</p>
+          <p>Never forget that you deserve love, kindness and all the beautiful things life has to offer. Keep shining, birthday girl. The world needs your sparkle! ✨</p>
+          <p class="signoff">With lots of love,<br><strong>Gayatri ❤️</strong></p>
+        </article>
+        <button id="toFinal" class="text-button hidden">Ready for the final surprise? ↓</button>
+      </div>
+    </section>
+
+    <section id="final" class="page">
+      <div class="final-card">
+        <div class="final-stars">✦　✧　✦</div>
+        <div class="final-cake">🎂</div>
+        <h1>Happiest Birthday,<br><em>Samuu❤️!</em></h1>
+        <p class="final-message">May your life sparkle with happiness, your heart stay full of love, and your wishes find their way to you. Keep smiling and keep shining! 💗</p>
+        <p>love uhh alwayss❤️</p>
+        <button id="celebrateButton" class="main-button">Make it sparkle again ✨</button>
+        <p class="final-signature">Made with love by Gayatri ♡</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>for the sweetest birthday girl <span>♡</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
