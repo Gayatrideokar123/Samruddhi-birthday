@@ -74,15 +74,11 @@ let musicOn = false;
 const musicButton = document.getElementById("musicButton");
 
 const birthdayMusic = new Audio(
-  "music/bright-happy-acoustic-instrumental.mp3"
+  "./bright-happy-acoustic-instrumental.mp3"
 );
 
-birthdayMusic.loop = true;
-birthdayMusic.volume = 0.48;
-birthdayMusic.preload = "auto";
-
 const finaleMusic = new Audio(
-  "music/happy-birthday-pop-finale.mp3"
+  "./happy-birthday-pop-finale.mp3"
 );
 
 finaleMusic.loop = false;
